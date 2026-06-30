@@ -1,5 +1,10 @@
 import type { NextConfig } from 'next';
 
+// Valida process.env contra el esquema Zod al cargar la config, para que
+// `next build`/`dev`/`start` fallen de inmediato si falta una variable
+// requerida, en vez de fallar en runtime cuando algo intente usarla.
+import './src/lib/env';
+
 const isDev = process.env.NODE_ENV === 'development';
 
 const contentSecurityPolicy = [
