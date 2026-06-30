@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  manifest: '/site.webmanifest',
   icons: {
     icon: '/brand-assets/icon.svg',
     shortcut: '/brand-assets/favicon.ico',
